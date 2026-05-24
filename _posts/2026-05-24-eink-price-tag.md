@@ -135,4 +135,4 @@ UART is using USART1 Alt. 2, SPI is using USART0 as SPI, got these value with mu
 
 ## Image
 
-![image](https://github.com/youheng7185/cc2530_eink/blob/main/eink.jpg)
+![image](https://github.com/youheng7185/cc2530_eink/blob/main/eink.jpg?raw=true)
