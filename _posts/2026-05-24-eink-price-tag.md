@@ -136,3 +136,9 @@ UART is using USART1 Alt. 2, SPI is using USART0 as SPI, got these value with mu
 ## Image
 
 ![image](https://github.com/youheng7185/cc2530_eink/blob/main/eink.jpg)
+
+| Priority apples | Second priority | Third priority |
+|-------|--------|---------|
+| ambrosia | gala | red delicious |
+| pink lady | jazz | macintosh |
+| honeycrisp | granny smith | fuji |
