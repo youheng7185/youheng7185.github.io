@@ -2,23 +2,23 @@
 
 # eink price tag, LG Innotek REBE-MZ21B
 
-Content to test blog functionality, content is mirrored from (https://github.com/youheng7185/cc2530_eink)
+Content to test blog functionality, content is mirrored from [https://github.com/youheng7185/cc2530_eink](https://github.com/youheng7185/cc2530_eink)
 
 ## Main components on the pcb
-* CC2530F256, 8051 based mcu with zigbee (https://www.ti.com/product/CC2530) (https://www.rhydolabz.com/documents/CC2530.pdf)
-* WFT0213CZ16 LW 212x104, 2.13 inch E-Ink raw display, seems like its just a generic eink display with controller (https://www.waveshare.com/2.13inch-e-paper-c.htm)
+* CC2530F256, 8051 based mcu with zigbee [https://www.ti.com/product/CC2530) (https://www.rhydolabz.com/documents/CC2530.pdf](https://www.ti.com/product/CC2530) (https://www.rhydolabz.com/documents/CC2530.pdf)
+* WFT0213CZ16 LW 212x104, 2.13 inch E-Ink raw display, seems like its just a generic eink display with controller [https://www.waveshare.com/2.13inch-e-paper-c.htm](https://www.waveshare.com/2.13inch-e-paper-c.htm)
 
 ## Steps to play around with it
 
 * SDCC 8051 compiler instead of keil or paid iar workbench,
 
- (https://github.com/svn2github/sdcc/blob/master/sdcc/device/include/mcs51/cc2530.h)
+ [https://github.com/svn2github/sdcc/blob/master/sdcc/device/include/mcs51/cc2530.h](https://github.com/svn2github/sdcc/blob/master/sdcc/device/include/mcs51/cc2530.h)
  
- (https://sdcc.sourceforge.net/)
+ [https://sdcc.sourceforge.net/](https://sdcc.sourceforge.net/)
  
- (https://sourceforge.net/p/contiki/mailman/contiki-developers/thread/387146F7-366B-480B-9FB4-6F7A9F201E59@bristol.ac.uk/)
+ [https://sourceforge.net/p/contiki/mailman/contiki-developers/thread/387146F7-366B-480B-9FB4-6F7A9F201E59@bristol.ac.uk/](https://sourceforge.net/p/contiki/mailman/contiki-developers/thread/387146F7-366B-480B-9FB4-6F7A9F201E59@bristol.ac.uk/)
  
-* Open source CC debugger implementation, (https://github.com/Larsjep/CCLib-ESP32)
+* Open source CC debugger implementation, [https://github.com/Larsjep/CCLib-ESP32](https://github.com/Larsjep/CCLib-ESP32)
 
 ## Hook up CC2530 to esp32s3
 
@@ -63,7 +63,7 @@ Debug config:
  [X] TIMER_SUSPEND
 ```
  
-* Dump flash failed, so apply the patch in the issues (https://github.com/Larsjep/CCLib-ESP32/issues/1), still dumped failed at 89 percent, I suspect its read protected
+* Dump flash failed, so apply the patch in the issues [https://github.com/Larsjep/CCLib-ESP32/issues/1](https://github.com/Larsjep/CCLib-ESP32/issues/1), still dumped failed at 89 percent, I suspect its read protected
 
 * Ignore dumping original firmware, now I can load new firmware compiled with sdcc
 
@@ -129,7 +129,7 @@ UART is using USART1 Alt. 2, SPI is using USART0 as SPI, got these value with mu
 
 * get LLM to write init register code for uart, watchdog and spi
 * To conclude up the pinout, uart is using usart1, alt 2, spi is on usart0, alt 1
-* Found a exact same model eink display init code (https://github.com/kristianlm/atmega328-eink-heltec), but its weird as my display seems like a black and white only. Writing framebuffer after sending 0x13 command works, the 0x10 command don't do anything.
+* Found a exact same model eink display init code [https://github.com/kristianlm/atmega328-eink-heltec](https://github.com/kristianlm/atmega328-eink-heltec), but its weird as my display seems like a black and white only. Writing framebuffer after sending 0x13 command works, the 0x10 command don't do anything.
 * The display seems like it's degraded, the contrast ratio is bad.
 * Rpi pico is used as usb to uart converter, the esp32s3 is running the CCLib firmware and act as debugger without debugging features, only flashing.
 
