@@ -66,6 +66,7 @@ Debug config:
  * Dump flash failed, so apply the patch in the issues (https://github.com/Larsjep/CCLib-ESP32/issues/1), still dumped failed at 89 percent, I suspect its read protected
 
 * Ignore dumping original firmware, now I can load new firmware compiled with sdcc
+
 ```
 python3 cc_write_flash.py -p /dev/ttyACM0 --in=/home/lapchong/arm_mpu/cc2530/print/out/firmware.bin --erase
 INFO: Found a CC2530 chip on /dev/ttyACM0
@@ -92,6 +93,7 @@ Flashing:
 
 Completed
 ```
+
 * The mcu would run the code a bit and stop, need to exit debug mode to let it run
 
 ```
@@ -107,6 +109,7 @@ Chip information:
 Exiting DEBUG mode...
 CPU is now running
 ```
+
 ## Pinout
 
 UART is using USART1 Alt. 2, SPI is using USART0 as SPI, got these value with multimeter in diode mode
