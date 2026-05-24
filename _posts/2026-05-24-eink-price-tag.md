@@ -142,3 +142,14 @@ UART is using USART1 Alt. 2, SPI is using USART0 as SPI, got these value with mu
 | ambrosia | gala | red delicious |
 | pink lady | jazz | macintosh |
 | honeycrisp | granny smith | fuji |
+
+| pin at package | pin function |
+|---|---|
+| P1_6 | UART_TX |
+| P1_7 | UART_RX |
+| P1_1 | EINK_RST |
+| P1_2 | EINK_BUSY |
+| P0_5 | EINK_CLK |
+| P0_4 | EINK_CS |
+| P0_3 | EINK_MOSI |
+| P0_2 | EINK_DC |
