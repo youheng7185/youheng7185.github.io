@@ -61,9 +61,9 @@ Debug config:
  [ ] TIMERS_OFF
  [X] DMA_PAUSE
  [X] TIMER_SUSPEND
- ```
+```
  
- * Dump flash failed, so apply the patch in the issues (https://github.com/Larsjep/CCLib-ESP32/issues/1), still dumped failed at 89 percent, I suspect its read protected
+* Dump flash failed, so apply the patch in the issues (https://github.com/Larsjep/CCLib-ESP32/issues/1), still dumped failed at 89 percent, I suspect its read protected
 
 * Ignore dumping original firmware, now I can load new firmware compiled with sdcc
 
@@ -113,6 +113,7 @@ CPU is now running
 ## Pinout
 
 UART is using USART1 Alt. 2, SPI is using USART0 as SPI, got these value with multimeter in diode mode
+
 | pin at package | pin function |
 |---|---|
 | P1_6 | UART_TX |
