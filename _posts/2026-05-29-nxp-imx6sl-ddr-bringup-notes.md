@@ -1,6 +1,4 @@
-# nxp imx6sl ddr bringup notes
-
-# nxp imx6sl ddr bringup notes
+# NXP IMX6SL DDR Bringup Notes
 
 ## Introduction
 
