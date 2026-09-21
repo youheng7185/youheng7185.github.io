@@ -2,7 +2,9 @@
 
 Let's continue the journey from Part 1. After I recevied the PCB, I repaste the NAND ic with BGA132 stencils and solder everything together.
 
-But before trying the new flash, I had some NAND flash breakout board before this, they are old SLC NAND. Probably you can find these in industrial devices or USB flash drive from maybe 20 years ago. I bitbang the NAND interface with a RP2040 just to build up my mental model about nand flash.
+But before trying the new flash, I had some NAND flash breakout board before this, they are old SLC NAND. Probably you can find these in industrial devices or USB flash drive from maybe 20 years ago. I bitbang the NAND interface with a RP2040 just to build up my mental model about nand flash. They are W29N01HVS1NA 128MB SLC and MT29F2G08ABAEAWP 256MB SLC.
+
+![onfi1_flash](https://github.com/youheng7185/youheng7185.github.io/blob/main/uploads/nand_p2/onfi1.jpg?raw=true)
 
 Here is the explanation of the pins function on these NANDs, they are the basic sets of pins, newer flash are also using these but added a few for synchronous interface and strobe like on DDR SRAM.
 
@@ -92,5 +94,4 @@ Oh, forgot to explain NAND flash fundamentals here, these info are under Memory 
 
 There is also Random Data Output which people used to skip the 2048 bytes of data and read directly starting from the 64 bytes data region. Another important thing from the datasheet, there would be initial invalid blocks when the NAND flash is shipped from the factory, so NAND flash controller usually would read spare area to check the invalid blocks when it is in manufacturing or production mode of the SSD.
 
-
-
+Enough for now, I also got basic read, erase and write working on the NAND scrapped from the SSD. Gonna explain them in the next part of this series.
