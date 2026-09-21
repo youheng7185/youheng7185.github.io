@@ -20,7 +20,7 @@ Then, I turn to the page of ONFI 3.2 because it shows the pins for that package 
 
 Later on, I plugged in the scrapped SSD board to a SATA enclosure. Then, I measured the VCCQ and VCC voltage, its 1.8V and 3.3V, following ONFI standards also, good. Next up, I opened up Kicad and draw a breakout board so I could use that NAND with my microcontroller or FPGA. You may asked, I could just get those Silicon Motion flash controller with SATA or NVME interface to reuse the NAND flash, but I would like to reimplement those as learning activities to kill time.
 
-![image4](https://github.com/youheng7185/youheng7185.github.io/blob/main/uploads/nand_p1/pcb_my_ver.png?raw=true)
+![image4](https://github.com/youheng7185/youheng7185.github.io/blob/main/uploads/nand_p1/pcb_my_ver.jpg?raw=true)
 
 The board is quite simple, it has the BGA132 footprint, four logic converters that bidirectionally converts 1.8v and 3.3v (currently I do not have any MCU or FPGA with 1.8V logic around, so I need 3.3V logic). This NAND is using 1.8v logic as the VCCQ is 1.8V. The top SOT-2-3 ic was a 3.3V and 1.8V LDO to generate the required voltage for NAND. On the back, I put 0.1uF capacitor on each VCC and VCCQ pins. Also a RC circuit to pull up WP_N pins after a short delay.
 
